@@ -6,7 +6,7 @@ const server = http.createServer((req, res)=>{
     if(req.url === '/favicon.ico') return res.end();
     const log = `\n${Date.now()} ${req.url}: Request Received\n`; 
     const myUrl = url.parse(req.url, true);
-    console.log(myUrl);
+    // console.log(myUrl);
     fs.appendFile("log.txt", log, ()=>{
         switch(myUrl.pathname){
             case "/":
@@ -16,13 +16,11 @@ const server = http.createServer((req, res)=>{
                 const username = myUrl.query.name;
                 res.end(`Hello, ${username}`);
                 break;
-            case "/contact":
-                res.end("Your Contact Number is: +918769101102");
-                break;
+            case "/search":
+                const search=(`search,${search}`)
             default:
                 res.end("Error, Page not found.");
         }
     } )
 })
-   
-server.listen(4000, ()=> {console.log("Server is Running...") } );
+server.listen(8000, ()=> {console.log("Server is Running...") } );
