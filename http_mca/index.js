@@ -2,6 +2,7 @@ const http = require("http");
 const fs = require("fs");
 const url = require("url");
 
+const PORT = 4000;
 const server = http.createServer((req, res)=>{
     if(req.url === '/favicon.ico') return res.end();
     const log = `\n${Date.now()} ${req.url}: Request Received\n`; 
@@ -14,7 +15,7 @@ const server = http.createServer((req, res)=>{
                 res.end("You are on Home Page");
                 break;
             case "/about":
-                const username = myUrl.query.userid;
+                const username = myUrl.query.name;
                 res.end(`Hello, ${username}`);
                 break;
             case "/contact":
@@ -25,5 +26,5 @@ const server = http.createServer((req, res)=>{
         }
     } )
 })
-   
-server.listen(4000, ()=> {console.log("Server is Running...") });
+
+server.listen(PORT, ()=> {console.log(`Server is Running on: ${PORT}`)});
