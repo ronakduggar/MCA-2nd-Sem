@@ -3,12 +3,8 @@ REST API : JSON
 GET /users : HTML Document Render - Done
 GET /api/users : It will get all the users -- Done 
 
-GET /api/users/1: Get the users with ID 1.
-GET /api/users/2: Get the users with ID 2.
-
-Dynamic Path Parameter:
-GET /api/users/:id
-:id - variable/ Dynamic
+GET /api/users/1: Get the users with ID 1. - Done
+GET /api/users/2: Get the users with ID 2. - Done
 
 POST /api/users : Create a New User.
 
