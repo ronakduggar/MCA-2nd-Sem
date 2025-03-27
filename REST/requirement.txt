@@ -1,0 +1,19 @@
+REST API : JSON (Representational State Transfer)
+
+Rule 1: Server and client shoulndt be dependent on each other.
+Rule 2: Always respect HPPT Methods.
+
+GET /users : HTML Document Render. - Done
+GET /api/users : It will get all the users in JSON format. - Done
+
+GET /api/users/:id : It will get all the users with ID 1.
+GET /api/users/2 : It will get all the users with ID 1.
+
+Dynamic ID : 
+:id - Dynamic path / variable
+
+POST /api/users : It will create a new User.
+
+PATCH /api/users/1: It will edit the data which have id 1. 
+
+DELETE /api/users/1 : It will delete the user with id 1.
