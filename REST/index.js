@@ -1,7 +1,11 @@
 const express = require("express");
 const users = require("./data.json");
+const fs = require("fs");
 const app = express();
 const PORT = 5001;
+
+//MiddleWare
+app.use(express.urlencoded({extended: false}));
 
 //HTML DOCUMENT
 app.get("/users", (req, res) => {
@@ -11,6 +15,7 @@ app.get("/users", (req, res) => {
       </ul>`;
     return res.send(html);
   });
+
 
 //REST API
 app.get("/api/users", (req, res) => {
@@ -23,15 +28,19 @@ app.route("/api/users/:id")
     const user = users.find((user)=>user.id === id);
     return res.json(user);
   })
-  .put((req,res)=>{
+  .patch((req,res)=>{
     return res.json({status:"pending"});
   })
   .delete((req,res)=>{
-    return res.json({status:"pending"});
+    return res.json({status:"This is pending"});
   })
 
 app.post("/api/users",(req,res)=>{
-  return res.json({status:"pending"});
+  const body = req.body;
+  users.push({...body, id: users.length+1});
+  fs.writeFile('./data.json', JSON.stringify(users),(err, data)=>{
+    res.json({status:"Sent"});
+  })
 })
 
 app.listen(PORT, () => {
