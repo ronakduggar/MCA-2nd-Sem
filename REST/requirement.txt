@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 REST API : JSON (Representational State Transfer)
 
 Rule 1: Server and client shoulndt be dependent on each other.
@@ -17,3 +18,18 @@ POST /api/users : It will create a new User.
 PATCH /api/users/1: It will edit the data which have id 1. 
 
 DELETE /api/users/1 : It will delete the user with id 1.
+=======
+REST API : JSON
+
+GET /users : HTML Document Render - Done
+GET /api/users : It will get all the users -- Done 
+
+GET /api/users/1: Get the users with ID 1. - Done
+GET /api/users/2: Get the users with ID 2. - Done
+
+POST /api/users : Create a New User.
+
+PATCH /api/users/1 : Edit the User with ID 1.
+
+DELETE /api/users/1 : Delete the User with id 1
+>>>>>>> 541014fd863f37197cb34e380e35cc254f06cd48

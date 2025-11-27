@@ -5,13 +5,26 @@
   "main": "index.js",
   "scripts": {
     "start": "node index",
+<<<<<<< HEAD
     "dev": "nodemon index"
+=======
+    "dev" : "nodemon index"
+>>>>>>> 541014fd863f37197cb34e380e35cc254f06cd48
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+<<<<<<< HEAD
     "express": "^4.21.2",
     "nodemon": "^3.1.9"
+=======
+<<<<<<<< HEAD:http_mca/package.json
+    "express": "^4.21.2",
+    "nodemon": "^3.1.9"
+========
+    "express": "^4.21.2"
+>>>>>>>> 541014fd863f37197cb34e380e35cc254f06cd48:express/package.json
+>>>>>>> 541014fd863f37197cb34e380e35cc254f06cd48
   }
 }

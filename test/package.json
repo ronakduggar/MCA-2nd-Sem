@@ -10,7 +10,10 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+<<<<<<< HEAD:test/package.json
     "cookie-parser": "^1.4.7",
+=======
+>>>>>>> 541014fd863f37197cb34e380e35cc254f06cd48:http/package.json
     "express": "^4.21.2"
   }
 }
