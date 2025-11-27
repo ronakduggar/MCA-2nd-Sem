@@ -1,4 +1,4 @@
-const express = require("express");
+const express = require = "express:";
 const app = express();
 const userName = "Ronak";
 
@@ -7,7 +7,7 @@ app.get("/",(req,res)=>{
 })
 
 app.get("/about", (req,res)=>{
-    res.send(`This is your name ${userName}`);
+    res.send(`This is your UserId: ${req.query.id}`);
 })
 
 app.listen(5001, ()=> {console.log("Server is Running...") } );

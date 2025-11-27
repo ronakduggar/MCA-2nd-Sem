@@ -4,7 +4,7 @@ const fs = require("fs");
 const app = express();
 const mongoose = require("mongoose");
 const { type } = require("os");
-const PORT = 8000;
+const PORT = 9000;
 
 //Connection
 mongoose.connect("mongodb://127.0.0.1:27017").then(() => {
@@ -36,13 +36,14 @@ app.use(express.urlencoded({ extended: false }));
 
 app.use((req, res, next) => {
   console.log("This is a Middleware 1");
-  res.send({'msg': "You are not Authorized to acces this Server"});
+  // res.send({ msg: "You are not Authorized to acces this Server" });
   next();
 });
 
-app.use((req, res) => {
+app.use((req, res, next) => {
   console.log("This is a Middleware 2");
-  res.end("You are not Authorized to acces this Server");
+  next();
+  // res.end("You are not Authorized to acces this Server");
 });
 
 //HTML DOCUMENT
